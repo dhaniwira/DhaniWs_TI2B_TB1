@@ -1,0 +1,314 @@
+/* 1. RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. NAVIGASI (FIXED NAVBAR) */
+nav {
+    background-color: #1abc9c; 
+    padding: 1rem;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    transition: all ease 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e8f8f5; 
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* 3. LAYOUT UTAMA & SECTION */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    flex: 1;
+    padding: 100px 2rem 40px; 
+}
+
+h1, h2, h3 {
+    color: #0e6655; 
+    margin-bottom: 1rem;
+}
+
+/* 4. GAYA KHUSUS BERANDA (BACKGROUND) */
+#beranda {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Tubes_image/RuangPUT.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    color: white; 
+}
+
+#beranda h1, 
+#beranda p {
+    color: white;
+}
+
+#beranda > .container > div[style*="background-color: #ecf0f1"] {
+    background-color: rgba(236, 240, 241, 0.9) !important;
+    color: #333 !important;
+    border-radius: 8px;
+}
+
+#beranda > .container > div[style*="background-color: #ecf0f1"] p {
+    color: #333 !important; 
+}
+
+/* 5. ELEMEN UMUM (GAMBAR, TABEL, FORM)*/
+.img-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 2px dashed #999;
+    color: #555;
+    font-style: italic;
+    background-size: cover;
+    background-position: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1abc9c; 
+    color: white;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+    border-top: 4px solid #1abc9c;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Flexbox untuk Radio & Checkbox */
+.flex-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.flex-options label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    background: #f4f7f6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.flex-options input[type="radio"],
+.flex-options input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background-color: #1abc9c; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #16a085; 
+}
+
+/* 6. PRIVASI KELUARGA (EFEK BLUR)*/
+.privacy-blur {
+    filter: blur(10px); 
+    opacity: 0.6;
+    transition: all 0.5s ease;
+    cursor: help; 
+}
+
+img.privacy-blur {
+    border: none !important;
+    object-fit: cover;
+    padding: 0 !important;
+}
+
+.privacy-blur:hover {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* 7. FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: #e2e8f0;
+}
+
+/* 8. GAYA LOKAL HALAMAN */
+.card-teman {
+    background-color: #fff;
+    border-top: 4px solid #1abc9c; 
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.highlight-ukm {
+    color: #d35400;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 9. GALERI GAMBAR */
+.image-gallery {
+    display: flex;
+    gap: 15px; 
+    margin: 1.5rem 0;
+    width: 100%;
+    overflow-x: auto; 
+    flex-wrap: nowrap; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 15px; 
+}
+
+.image-gallery .img-placeholder {
+    flex: 0 0 auto; 
+    width: 250px; 
+    height: 180px; 
+    margin: 0; 
+    scroll-snap-align: center; 
+}
+
+.image-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+    background: #1abc9c; 
+    border-radius: 4px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb:hover {
+    background: #16a085; 
+}

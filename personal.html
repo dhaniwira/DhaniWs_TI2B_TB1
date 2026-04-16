@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Tugas Besar 1 - Personal</title>
+    <link rel="stylesheet" href="Style_Tubes1.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="keluarga.html">Keluarga</a></li>
+            <li><a href="teman.html">Teman</a></li>
+            <li><a href="hobi.html">Hobi</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="personal">
+            <div class="container">
+                <h2 style="text-align: center;">Profil Personal</h2>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch; justify-content: center; margin-bottom: 40px;">
+                    <div style="flex: 1; min-width: 250px; max-width: 320px; background: #fff; padding: 30px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #1abc9c; display: flex; flex-direction: column; justify-content: center;">
+                        <img src="Tubes_image/Foto_jas.jpeg" alt="Foto Jas Almamater PNJ" style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; margin: 0 auto 20px; display: block; border: 4px solid #f4f7f6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <h3 style="margin-top: 0; margin-bottom: 15px; font-size: 1.1rem; color: #333;">Mari Terhubung!</h3>
+                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://www.linkedin.com/in/dhani-wira-saputra-403722283" target="_blank" style="background-color: #009dff; color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: bold; transition: opacity 0.3s;">
+                                LinkedIn
+                            </a>
+                            <a href="https://instagram.com/dhan.ws" target="_blank" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: bold; transition: opacity 0.3s;">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                    <div style="flex: 2; min-width: 300px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #3498db; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0; margin-bottom: 20px; color: #333; border-bottom: 2px solid #f4f7f6; padding-bottom: 10px;">Data Diri & Pendidikan</h3>
+                        <ul style="margin-left: 20px; margin-bottom: 0; line-height: 2; color: #444;">
+                            <li><strong>Nama:</strong> Dhani Wira Saputra</li>
+                            <li><strong>Umur:</strong> 19 Tahun</li>
+                            <li><strong>Tanggal Lahir:</strong> 08 Desember 2006</li>
+                            <li><strong>Institusi Sekarang:</strong> Politeknik Negeri Jakarta</li>
+                            <li><strong>Asal Sekolah:</strong> MAN 1 Metro (Jurusan IPA)</li>
+                            <li><strong>Keahlian Fokus:</strong> Pengembangan Robotika Dan Pemrograman</li>
+                            <li><strong>Pengalaman:</strong> Menjabat Sebagai Ketua Robotik Man 1 Metro</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-container" style="margin-top: 0; width: 100%;">
+                    <h3 style="color: #333; margin-top: 0; border-bottom: 2px solid #f4f7f6; padding-bottom: 10px; margin-bottom: 20px;">Mari Berdiskusi!</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="nama">Nama Anda:</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda..." required>
+                        </div>
+
+                        <label>Tujuan Menghubungi (Pilih Salah Satu):</label>
+                        <div class="flex-options">
+                            <label><input type="radio" name="tujuan" value="proyek" required> Kolaborasi Proyek</label>
+                            <label><input type="radio" name="tujuan" value="tugas"> Diskusi Pemrograman</label>
+                            <label><input type="radio" name="tujuan" value="lainnya"> Sekadar Menyapa</label>
+                        </div>
+
+                        <label>Topik Ketertarikan (Boleh Pilih Banyak):</label>
+                        <div class="flex-options">
+                            <label><input type="checkbox" name="minat" value="ai"> Machine Learning / AI</label>
+                            <label><input type="checkbox" name="minat" value="robotika"> Robotika </label>
+                            <label><input type="checkbox" name="minat" value="web"> Web Development</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+
+                        <button type="submit" style="width: 100%; font-weight: bold; font-size: 1.1rem; padding: 12px;">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Personal Web Dhani Wira Saputra</p>
+    </footer>
+
+</body>
+</html>
